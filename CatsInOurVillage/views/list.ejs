@@ -1,0 +1,45 @@
+<% for (var item = 0; item < list.length; item++) { %>
+<div
+  class="list-container-card"
+  key="<%= list[item].id %>"
+  onclick="getDetail('<%= list[item].id%>')"
+>
+  <div class="title">🐱<%= list[item].title %></div>
+  <div class="list-container-card-tag">
+    <!-- 밥 유무 여부-->
+    <% if (list[item].food) { %>
+    <div class="food" style="background-color: #a5d8ff">
+      밥 있음
+    </div>
+    <% } else { %>
+    <div class="food" style="background-color: #ff6b6b">
+      밥 없음
+    </div>
+    <%} %>
+    <!-- 물 유무 여부-->
+    <% if (list[item].water) { %>
+    <div class="food" style="background-color: #a5d8ff">
+      물 있음
+    </div>
+    <% } else { %>
+    <div class="food" style="background-color: #ff6b6b">
+      물 없음
+    </div>
+    <%} %>
+    <!-- 집 유무 여부-->
+    <% if (list[item].shelter) { %>
+    <div class="food" style="background-color: #a5d8ff">
+      집 있음
+    </div>
+    <% } else { %>
+    <div class="food" style="background-color: #ff6b6b">
+      집 없음
+    </div>
+    <%} %>
+    <!-- 마지막 갱신 시간 -->
+    <div class="list-container-card-tag time" style="background-color:#fff3bf">
+      <b>마지막 돌봄 시간 </b>&emsp; <%= list[item].updated_at %>
+    </div>
+  </div>
+</div>
+<% } %>

@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Cats In Our Village</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        Cats
+        <p>우리 동네 고양이 돌보기 현황</p>
+      </div>
+      <div class="content">
+        <div class="map" id="map"></div>
+        <div class="list">
+          <div class="list-header">
+            <div class="list-header-title">
+              우리 동네 고양이들
+            </div>
+            <p>고양이를 돌봐줬다면 해당 고양이를 클릭한 뒤 갱신해주세요</p>
+          </div>
+          <div class="list-container">
+            <%- include list.ejs %>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <a href="https://github.com/inbaeyoonkr" target="_blank"
+          ><img src="/images/github.png"
+        /></a>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <%- include modal.ejs %>
+    <!-- Update Modal -->
+    <%- include updateModal.ejs %>
+    <!-- Script -->
+    <%- include script.ejs %>
+  </body>
+</html>
